@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+black = "==19.10b0"
+pytest = "*"
+coverage = "*"
+isort = "*"
+vulture = "*"
+wemake-python-styleguide = "*"
+autoflake = "*"
+mypy = "*"
+
+[packages]
+pyjwt = "*"
+fastapi = "*"
+requests = "*"
+pydantic = "*"
+uvicorn = "*"
+raven = "*"
+alembic = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+structlog = "*"
+environs = "*"
+redis = "*"
+asyncpg = "*"
+
+[requires]
+python_version = "3.8"

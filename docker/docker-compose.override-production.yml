@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    networks:
+      internal:
+        ipv4_address: 10.190.10.11
+
+  app:
+    networks:
+      internal:
+        ipv4_address: 10.190.10.12
+
+  nginx:
+    networks:
+      internal:
+        ipv4_address: 10.190.10.10
+      external:
+        ipv6_address: IPv6
+
+networks:
+  internal:
+    driver: bridge
+    enable_ipv6: false
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.190.10.0/24
+
+  external:
+    driver: bridge
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.191.10.0/24
+        - subnet: IPv6
